@@ -4,7 +4,7 @@ const BaseProducer = require('./BaseProducer');
 class BasicProducer extends BaseProducer {
 
     constructor() {
-        super({Producer: kafka.Producer, client: new kafka.KafkaClient() });
+        super({Producer: kafka.Producer, client: new kafka.KafkaClient(), KeyedMessage: kafka.KeyedMessage });
     }
 
 }

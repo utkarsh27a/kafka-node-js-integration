@@ -2,13 +2,13 @@ const logger = console;
 
 class BaseProducer {
 
-    constructor({ Producer, client }) {
+    constructor({ Producer, client, KeyedMessage }) {
         this.Producer = Producer;
         this.client = client;
-        this._setInst();
+        this.KeyedMessage = KeyedMessage;
     }
 
-    _setInst() {
+    connect() {
         this.producerInst = new this.Producer(this.client);
         return new Promise((resolve, reject) => {
             this.producerInst.on('ready', () => {
@@ -33,6 +33,10 @@ class BaseProducer {
                 return resolve(data);
             });
         });
+    }
+
+    createKeyedMessage(key, message) {
+        return Promise.resolve(new this.KeyedMessage(key, message));
     }
 }
 
