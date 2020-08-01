@@ -1,0 +1,13 @@
+{
+  "name": "kafka-node-lib-poc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  },
+  "author": "Utkarsh Pandey",
+  "license": "MIT",
+  "dependencies": {
+    "kafka-node": "^5.0.0"
+  }
+}
