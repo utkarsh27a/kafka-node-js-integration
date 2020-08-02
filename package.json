@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "author": "Utkarsh Pandey",
   "license": "MIT",
   "dependencies": {
+    "bluebird": "^3.7.2",
     "kafka-node": "^5.0.0"
   }
 }
