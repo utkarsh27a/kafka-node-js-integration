@@ -1,5 +1,5 @@
-const logger = console;
-
+const Promise = require('bluebird');
+const logger = require('../logger');
 class BaseProducer {
 
     constructor({ Producer, client, KeyedMessage }) {
